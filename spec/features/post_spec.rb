@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   describe 'navigate' do
     before do
-        @user = User.create!(email: "test1@test.com", first_name: "joy", last_name: "wald", password: "secret", password_confirmation: "secret")
+        @user = FactoryGirl.create(:user)
         login_as(@user, :scope => :user)
     end
 
@@ -21,12 +21,13 @@ RSpec.describe Post, type: :model do
         expect(page).to have_content(/Posts/)
       end
       it 'has a list of posts' do
-        post1 = Post.create!(date: Date.today, rationale: "Post 1", user_id: @user.id)
-        post2 = Post.create!(date: Date.today, rationale: "Post 2", user_id: @user.id)
+        post1 = FactoryGirl.create(:post)
+        post2 = FactoryGirl.create(:second_post)
+
         visit posts_path
         
-        expect(page).to have_content 'Post 1'
-        expect(page).to have_content 'Post 2'
+        expect(page).to have_content 'Some rationale'
+        expect(page).to have_content 'More rationale'
       end
     end
 

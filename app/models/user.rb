@@ -9,6 +9,6 @@ class User < ApplicationRecord
 
 
   def full_name
-    "#{first_name}  #{last_name}"
+    "#{last_name.upcase}, #{first_name.upcase}"
   end
 end
