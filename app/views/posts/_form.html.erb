@@ -1,10 +1,6 @@
 
 <%= form_for @post do |f| %>
-  <% if @post.errors.any? %>
-    <%= @post.errors.full_messages.each do |error| %>
-      <%= js add_gritter(error, title: "Overtime App Notification", sticky: false, time: 3000) %>
-    <%end%>
-  <%end%>
+<%= render 'shared/errors' %>
  
 <div class="form-group">
   <li class='input-group date' id='datetimepicker1'>
