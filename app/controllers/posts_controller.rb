@@ -23,7 +23,7 @@ before_action :set_post, only: [:show, :edit, :update, :destroy]
 	def show
 	  
 	end
-	
+
 	def edit  
 	end
 
@@ -33,6 +33,14 @@ before_action :set_post, only: [:show, :edit, :update, :destroy]
 	  else
 		render :edit
 	  end
+	end
+
+	def destroy
+	  if @post.destroy
+	  redirect_to posts_path, notice: "You post has been deleted!"
+	else
+		render posts_path
+	end
 	end
 
 end

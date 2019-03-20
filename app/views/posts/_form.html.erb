@@ -1,15 +1,26 @@
+
 <%= form_for @post do |f| %>
  
-  <li>
+<div class="form-group">
+  <li class='input-group date' id='datetimepicker1'>
     <%=f.label :date %><br>
-    <%=f.date_field :date %>
+    <%=f.date_field :date, class: "form-control"  %>
   </li>
+</div>
+<div class="form-group">
   <li>
     <%=f.label :rationale %><br>
-    <%=f.text_area :rationale %>
+    <%=f.text_area :rationale, class: "form-control" %>
   </li>
-  <li>
-    <%= f.submit "Save"%>
-  </li>
+</div>
 
+     <%= f.submit "Save",class: "btn btn-primary btn-block"%>
 <%end%>
+
+
+
+
+
+
+
+  

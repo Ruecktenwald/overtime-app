@@ -37,8 +37,16 @@ RSpec.describe Post, type: :model do
 
         expect(page).to have_content("New Post")
       end
+    end
 
-
+    feature 'delete' do
+      it 'can be deleted' do
+        @post = FactoryGirl.create(:post)
+        visit posts_path
+        click_link("delete_post_from_index")
+       
+        expect(page).to_not  have_content("#{@post.rationale}")
+      end
     end
 
     feature 'creation' do
