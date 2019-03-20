@@ -30,7 +30,16 @@ RSpec.describe Post, type: :model do
         expect(page).to have_content 'More rationale'
       end
     end
+    feature 'new' do
+      it 'has a link to new from homepage' do
+        visit root_path
+        click_link("new_post_from_nav")
 
+        expect(page).to have_content("New Post")
+      end
+
+
+    end
 
     feature 'creation' do
       before do
