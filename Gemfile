@@ -22,6 +22,7 @@ gem 'bootstrap-sass', '~>3.3', '>= 3.3.6'
 gem 'gritter', '1.2.0'
 gem 'administrate'
 gem 'bourbon', '~> 5.0.0.beta.5'
+gem 'pundit', '~>1.1'
 
 group :development, :test do
   gem 'byebug', platform: :mri
