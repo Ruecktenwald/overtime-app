@@ -51,7 +51,7 @@ end
 private
 
  def post_params
-   params.require(:post).permit(:date,:rationale,:user_id)
+   params.require(:post).permit(:date,:rationale,:user_id,:status)
  end
  
  def set_post

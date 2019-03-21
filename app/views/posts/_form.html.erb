@@ -13,12 +13,25 @@
     <%=f.label :rationale %><br>
     <%=f.text_area :rationale, class: "form-control" %>
   </li>
+
+
+  <div class="form-group">
+   
+    <%= f.radio_button :status,"submitted" %>
+    <%=f.label :status, "Submitted" %>
+    
+    <%= f.radio_button :status,"approved" %>
+    <%=f.label :status, "Approved"  %>
+    
+    <%= f.radio_button :status, "rejected" %>
+    <%=f.label :status, "Rejected"  %>
+  </div>
 </div>
-
-     <%= f.submit "Save",class: "btn btn-primary btn-block"%>
+  
+<div>
+  <%= f.submit "Save",class: "btn btn-primary btn-block"%>
+</div>
 <%end%>
-
-
 
 
 
