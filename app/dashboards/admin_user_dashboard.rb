@@ -24,7 +24,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
     :email,
   ].freeze
 
-  SHOW_PAGE_ATTRIBUTES = [
+  SHOW_PAGE_ATTRIBUTES = 
     :posts,
     :id,
     :email,

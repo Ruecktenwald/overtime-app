@@ -3,8 +3,6 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   describe "Creation" do
   	before do
-  		user = FactoryGirl.create(:user)
-        login_as(user, :scope => :user)
   		@post = FactoryGirl.create(:post)
   	end
 

@@ -39,7 +39,7 @@ class ApplicationPolicy
   end
   def admin_types
         ['AdminUser']
-    end
+  end
 
   class Scope
     attr_reader :user, :scope
