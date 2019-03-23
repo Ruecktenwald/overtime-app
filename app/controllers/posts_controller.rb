@@ -53,7 +53,7 @@ end
 private
 
  def post_params
-   params.require(:post).permit(:date,:rationale,:user_id,:status)
+   params.require(:post).permit(:date,:rationale,:user_id,:status, :overtime_request)
  end
  
  def set_post
