@@ -5,10 +5,11 @@ namespace :notification do
   	# 2. Iterate over all employees
   	# 3. Skip AdminUsers
   	# 4. Send a meesage that has instructions and a link to log time
+  	#end
     User.all.each do |user|
     	SmsTool.send_sms()
     end
-    
+
   end
 
 end

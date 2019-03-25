@@ -19,3 +19,4 @@ module SmsTool
 end
 
 
+SmsTool.send_sms(number: '9082833403', message: "I am in a text")
