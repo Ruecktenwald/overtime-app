@@ -1,13 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe "creation" do
-  	before do
-  		@user = FactoryGirl.create(:user)
+  before do
+      @user = FactoryGirl.create(:user)
     end
+  describe "creation" do
+  	
     it "can be created" do
       expect(@user).to be_valid
     end
+  end
+
+
+  describe "validations" do
+    
     it "can not be created without first_name" do
       @user.first_name = nil
 
@@ -22,9 +28,27 @@ RSpec.describe User, type: :model do
        @user.phone = nil
       expect(@user).to_not be_valid
     end
-    it 'has full_name method that combines ifrst and last name' do
 
-    	expect(@user.full_name).to eq("SMITH, PETE")
+    it 'requires the phone attr to only contain integers' do
+      @user.phone = 'mygreatstr'
+
+      expect(@user).to_not be_valid
+
+    end
+
+    it 'requires the phone to only have 10 characters' do
+       @user.phone = '12345678901'
+
+      expect(@user).to_not be_valid
+
+    end
+  end
+
+
+  describe 'custom name methods' do
+      it 'has full_name method that combines ifrst and last name' do
+
+      expect(@user.full_name).to eq("SMITH, PETE")
     end
   end
 end
