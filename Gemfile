@@ -25,7 +25,7 @@ gem 'bourbon', '~> 5.0.0.beta.5'
 gem 'pundit', '~>1.1'
 gem 'twilio-ruby'
 gem 'dotenv-rails', :groups => [:development, :test]
-
+gem 'kaminari', '~> 1.1.1'
 
 group :development, :test do
   gem 'byebug', platform: :mri
