@@ -23,7 +23,7 @@ puts "100 posts have been created"
 
 
 100.times do |audti_log|
-	AuditLog.create!(user_id: User.last.id, status: 0, start_date: (Date.today - 3.days))
+	AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 3.days))
 	
 end
 
