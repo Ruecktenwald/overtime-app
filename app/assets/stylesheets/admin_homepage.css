@@ -6,12 +6,18 @@
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	padding: 20px;
+
 }
 
 .homepage-block {
   background-color: #1D3C91;
   color: white;
-  margin: 15px;
+  margin: 12px 42px 12px 42px ;
   padding: 15px;
+  text-align: center;
 
+}
+
+.pending-details {
+	font-weight: 900;
 }
