@@ -8,7 +8,14 @@
 	
   <div class='pending-homepage'>
 	<div>
-	   <p>asdfa</p>
+	  <h2>Confirmation Log</h2>
+        <hr>
+
+    <div class='pending-homepage row'>
+  	  <%= render partial: 'confirmation_log', locals: { recent_audit_items: @recent_audit_items } %>
+	</div>
+	<div class='clearfix'>
+		<%= link_to "View All", audit_logs_path, class: "btn btn-primary" %>
 	</div>
   </div>
 </div>
