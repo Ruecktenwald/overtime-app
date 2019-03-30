@@ -5,8 +5,9 @@ class AuditLogPolicy < ApplicationPolicy
   end
 
 
-
-
+  def confirm?
+  	 record.user.id == user.id
+  end
 
 private
 
