@@ -26,6 +26,8 @@ gem 'pundit', '~>1.1'
 gem 'twilio-ruby'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'kaminari', '~> 1.1.1'
+gem 'rails_12factor'
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
