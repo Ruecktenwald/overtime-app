@@ -12,7 +12,7 @@ FactoryGirl.define do
     phone "1231234567"
   end
 
-   factory :admin_user, class: "AdminUser" do
+  factory :admin_user, class: "AdminUser" do
     first_name "Admin"
     last_name "smith"
     email { generate :email }

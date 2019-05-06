@@ -1,7 +1,7 @@
 
 <%= form_for @post do |f| %>
 <%= render 'shared/errors' %>
- 
+
 <div class="form-group">
   <li class='input-group date' id='datetimepicker1'>
     <%=f.label :date %><br>
@@ -21,9 +21,9 @@
 
 
   
-   <%= render partial: 'status', locals: { f: f } if current_user.type == 'AdminUser' %>
+  <%= render partial: 'status', locals: { f: f } if current_user.type == 'AdminUser' %>
 </div>
-  
+
 <div>
   <%= f.submit "Save",class: "btn btn-primary btn-block"%>
 </div>
@@ -33,4 +33,3 @@
 
 
 
-  

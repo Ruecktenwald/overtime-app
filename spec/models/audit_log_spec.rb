@@ -14,8 +14,8 @@ RSpec.describe AuditLog, type: :model do
   describe 'validations' do
   	
   	it 'it should be required to have a user association' do
-    @audit_log.user_id = nil
-    expect(@audit_log).to_not be_valid
+      @audit_log.user_id = nil
+      expect(@audit_log).to_not be_valid
 
     end
     it 'it should always have a status' do

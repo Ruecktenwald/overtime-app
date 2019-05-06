@@ -1,20 +1,20 @@
 class AuditLog < ApplicationRecord
-  enum status: { pending:0, confirmed: 1 }
-  belongs_to :user
+	enum status: { pending:0, confirmed: 1 }
+	belongs_to :user
 
-  validates_presence_of :status, :start_date, :user_id
+	validates_presence_of :status, :start_date, :user_id
 
-  after_initialize :set_defaults
-
-
+	after_initialize :set_defaults
 
 
 
-private
 
-  def set_defaults
-  	self.start_date ||= Date.today - 6.days
-  end
+
+	private
+
+	def set_defaults
+		self.start_date ||= Date.today - 6.days
+	end
 
 
 

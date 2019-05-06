@@ -1,6 +1,6 @@
 <% if admin_types.include?(current_user.try(:type)) %>
-  <%= render 'admin' %>
+	<%= render 'admin' %>
 <% else %>
-  <%= render 'employee' %>
+	<%= render 'employee' %>
 <%end%>
 

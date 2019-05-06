@@ -7,7 +7,7 @@
 
 
 module Admin
-    def self.admin_types
+  def self.admin_types
     ['AdminUser']
   end
 

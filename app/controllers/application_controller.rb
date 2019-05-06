@@ -2,9 +2,9 @@ class ApplicationController < ActionController::Base
   include Pundit
 
 
-   def admin_types
-        ['AdminUser']
-   end
+  def admin_types
+    ['AdminUser']
+  end
 
 
   protect_from_forgery with: :exception
